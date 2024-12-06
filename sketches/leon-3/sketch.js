@@ -206,7 +206,7 @@ function handleStop() {
     if (!soundplayed) {
       console.log(winSound.isPlaying);
       soundplayed = true;
-      winSound.play();
+      winSound.play({ volume: 1.5 });
       setTimeout(finish, 1500);
     }
   }

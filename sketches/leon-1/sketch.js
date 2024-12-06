@@ -152,7 +152,7 @@ class Particle {
     this.gravity = 0.8; // Force de la gravité
     this.friction = 0.98; // Friction pour ralentir les particules
 
-    pointSound.setVolume(0.7);
+    pointSound.setVolume(0.5);
     pointSound.setRate(1.2 + Math.random() * 0.5);
 
     // Créer un élément DOM pour chaque particule
@@ -235,6 +235,6 @@ function update(dt) {
 function handleFinish() {
   winSound.play();
   document.body.removeChild(svgMouse);
-  setTimeout(finish, 3000);
+  setTimeout(finish, 1500);
   // Vérifier si l'animation est terminée
 }

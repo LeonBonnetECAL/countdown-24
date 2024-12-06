@@ -111,7 +111,7 @@ function update(dt) {
     if (isPointAActivated && isClose && input.isDown() && point !== pointA) {
       point.aligned = !point.aligned;
       pointSound.play({
-        volume: 0.6,
+        volume: 0.9,
         loop: false,
       });
     }
@@ -205,7 +205,7 @@ function update(dt) {
     if (!soundplayed) {
       console.log(winSound.isPlaying);
       soundplayed = true;
-      winSound.play();
+      winSound.play({ volume: 1.5 });
       setTimeout(finish, 1500);
     }
     setTimeout(() => {
