@@ -125,7 +125,6 @@ function update(dt) {
           console.log(activeCellCount, totalTargetCellCount);
 
           if (activeCellCount === totalTargetCellCount) {
-            winSound.play();
             handleFinish(); // Appel de la fonction handleFinish lorsque la condition est vraie
           }
         }
@@ -153,6 +152,7 @@ function handleFinish() {
   isPlaying = false;
   //document.body.removeChild(svgMouse);
   ctx.fillStyle = "black";
+  winSound.play();
 
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   console.log("finish");

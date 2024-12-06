@@ -117,6 +117,8 @@ function update(dt) {
     }
   }
 
+  // let numLine = 10;
+
   /// DRAW
 
   ctx.fillStyle = "black";
@@ -202,6 +204,9 @@ function update(dt) {
   }
   // Afficher "2" si le laser touche le point F
   if (isPointFActivated) {
+    ctx.lineWidth = 100;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
     if (!soundplayed) {
       console.log(winSound.isPlaying);
       soundplayed = true;
